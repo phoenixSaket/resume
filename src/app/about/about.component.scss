@@ -1,0 +1,78 @@
+.about-me-container {
+    color: var(--text-light);
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh);
+    position: relative;
+
+    .image-container {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        right: 0;
+        opacity: 0.1;
+    }
+
+    h1 {
+        width: max-content;
+        border-bottom: 2px solid var(--text-light);
+        margin-bottom: 50px;
+        font-size: 50px;
+        color: var(--light);
+
+        .green {
+            border-bottom: 2px solid var(--accent);
+        }
+    }
+
+    .line {
+        line-height: 150%;
+        margin: 30px 0;
+
+        .green {
+            font-size: 120%;
+            line-height: 120%;
+        }
+    }
+
+    .svg-green-fill {
+        fill: var(--accent);
+        transition-duration: 200ms;
+        opacity: 0.5;
+    }
+
+    .svg-green-stroke {
+        stroke: var(--accent);
+        transition-duration: 200ms;
+        opacity: 0.5;
+    }
+
+    .icons {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin: 0 0 75px 0;
+
+        svg {
+            width: 35px;
+            height: 35px;
+            transition-duration: 200ms;
+        }
+    }
+
+    svg:hover {
+        .svg-green-fill {
+            opacity: 1;
+        }
+
+        .svg-green-stroke {
+            opacity: 1;
+        }
+    }
+
+}

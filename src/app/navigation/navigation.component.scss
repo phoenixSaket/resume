@@ -1,0 +1,52 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.navigation-container {
+    position: fixed;
+    top: calc( 50% - 160px);
+    right: 10px;
+    background-color: var(--bg);
+    padding: 30px 12px;
+    border-radius: 20px;
+    gap: 20px;
+    border: 2px solid var(--text-dark);
+    transition-duration: 200ms;
+    
+    @extend .center;
+    flex-direction: column;
+
+    a {
+        @extend .center;
+        text-decoration: none;
+        
+        mat-icon {
+            transition-duration: 200ms;
+            @extend .center;
+            color: var(--light);
+            font-size: 20px;
+            border-bottom: 2px solid transparent;
+        }
+    }
+
+    a.active {
+        mat-icon {
+            color: var(--accent);
+            transform: scale(1.4);
+            border-bottom: 2px solid var(--accent);
+        }
+    }
+
+    a:hover {
+        mat-icon {
+            color: var(--light);
+            transform: scale(1.4);
+        }
+    }
+}
+
+.navigation-container:hover {
+    border: 2px solid var(--accent);
+}
