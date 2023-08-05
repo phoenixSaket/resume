@@ -15,7 +15,32 @@
         display: flex;
         align-items: center;
         right: 0;
-        opacity: 0.1;
+        opacity: 1;
+        z-index: -1;
+
+        &.colorize {
+            text {
+                opacity: 0.05;
+                fill: var(--text-light) !important;
+                transition-duration: 200ms;
+            }
+        }
+
+        svg {
+            margin-top: 150px;
+        }
+
+        text {
+            opacity: 0.3;
+            cursor: pointer;
+            transition-duration: 200ms;
+
+            &.selected {
+                opacity: 1;
+                fill: var(--accent) !important;
+                font-size: 80px !important;
+            }
+        }
     }
 
     h1 {
@@ -65,7 +90,7 @@
         }
     }
 
-    svg:hover {
+    .icon:hover {
         .svg-green-fill {
             opacity: 1;
         }

@@ -1,3 +1,6 @@
-<div class="navigation-container">
-    <a [ngClass]="link.isSelected ? 'active' : ''" [href]="link.path" *ngFor="let link of links" (click)="selectedLink(link)"><mat-icon>{{link.icon}}</mat-icon></a>
+<div class="navigation-container" (mouseover)="shouldShow = true" (mouseleave)="shouldShow = false">
+    <a [ngClass]="link.isSelected ? 'active' : ''" [href]="link.path" *ngFor="let link of links" (click)="selectedLink(link)">
+        <mat-icon>{{link.icon}}</mat-icon>
+        <div class="text" *ngIf="shouldShow">{{link.text}}</div>
+    </a>
 </div>

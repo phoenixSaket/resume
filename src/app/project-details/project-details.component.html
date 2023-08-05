@@ -1,0 +1,54 @@
+<!-- <div class="details-container">
+    <h2 class="title green">{{project.title}}</h2>
+    <div class="description-container">
+        <div class="details-inner">
+            <div class="gray">{{project?.isClientProject ? 'Project done as an employee' : 'Personal Project'}}</div>
+            <div class="description">{{project.detailedDescription}}</div>
+            <div class="warning gray">{{project.warning}}</div>
+        </div>
+        <div class="image-container">
+            <img class="image" src="{{project.image}}" alt="{{project.title}}">
+        </div>
+    </div>
+    <div class="tech-and-link">
+        <div class="tech">
+            <div class="tech-item" *ngFor="let tech of project.stack">
+                <div *ngIf="tech == 'Angular'">
+                    <ng-container *ngTemplateOutlet="angular"></ng-container>
+                </div>
+                <div *ngIf="tech == 'NodeJS'">
+                    <ng-container *ngTemplateOutlet="nodeJS"></ng-container>
+                </div>
+                <div *ngIf="tech == 'Ionic'">
+                    <ng-container *ngTemplateOutlet="ionic"></ng-container>
+                </div>
+                <div *ngIf="tech == 'Capacitor'">
+                    <ng-container *ngTemplateOutlet="capacitor"></ng-container>
+                </div>
+                <div *ngIf="tech == 'SQLite'">
+                    <ng-container *ngTemplateOutlet="sqlite"></ng-container>
+                </div>
+                <div *ngIf="tech == 'Electron'">
+                    <ng-container *ngTemplateOutlet="electron"></ng-container>
+                </div>
+                <div *ngIf="tech == 'Photoshop'">
+                    <ng-container *ngTemplateOutlet="photoshop"></ng-container>
+                </div>
+                <div *ngIf="tech == 'AdobeXD'">
+                    <ng-container *ngTemplateOutlet="adobeXD"></ng-container>
+                </div>
+                <div *ngIf="tech == 'Figma'">
+                    <ng-container *ngTemplateOutlet="figma"></ng-container>
+                </div>
+            </div>
+
+        </div>
+        <div class="link">
+            <a href="javascript:void(0)" (click)="backClick()">Back</a>
+            <a [href]="project.link" target="_blank" class="no-underline" *ngIf="project.link.length > 0">
+                {{project?.linkText ? project.linkText: 'Open'}}
+                <mat-icon class="open-in-new">{{project?.linkText ? project.linkIcon : 'open_in_new' }}
+                </mat-icon></a>
+        </div>
+    </div>
+</div> -->

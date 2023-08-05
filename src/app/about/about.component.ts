@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
+  public selectedTech: string = "";
+  public isInit: boolean = false;
 
   public icons = [
     "Angular",
@@ -17,5 +19,18 @@ export class AboutComponent {
     "Adboe XD",
     "Figma"
   ];
+
+  setSelectedTech(tech: string) {
+    this.selectedTech = tech;
+  }
+
+  resetTech() {
+    this.selectedTech = "";
+    this.isInit = false;
+  }
+
+  initTech() {
+    this.isInit = true;
+  }
 
 }

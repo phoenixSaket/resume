@@ -15,6 +15,8 @@ export class NavigationComponent {
     { icon: 'email', text: 'Contact', path: '#contact', isSelected: false }
   ];
 
+  public shouldShow: boolean = false;
+
   selectedLink(link: any) {
     this.links.forEach(element => {
       element.isSelected = false;
