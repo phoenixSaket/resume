@@ -1,3 +1,46 @@
 <div class="education-container">
     <h1><span class="green">Education</span></h1>
+
+    <div class="education-inner-container" [ngClass]="cursorInit ? 'show' : ''" (mouseenter)="initCursor()" (mouseleave)="resetCursor()">
+        <div class="education" *ngFor="let exp of education; let i = index; let last = last" (mouseenter)="selectEducation(exp.course)">
+            <div class="index">
+                <div class="number">{{education.length - i}}</div>
+                <div class="line" [ngClass]="{'last': last}"></div>
+            </div>
+
+            <div class="details">
+                <h3 class="title green">{{exp.course}}</h3>
+                <h5 class="role">{{exp.courseFull}}</h5>
+                <div class="college">
+                    {{exp.college}}, 
+                    <span class="green">{{exp.city}}</span>
+                </div>
+                <h6 class="date">
+                    <span class="start" *ngIf="exp.period.start">{{exp.period.start}} -</span>
+                    <span class="end">{{exp.period.end}}</span>
+                </h6>
+                
+            </div>
+        </div>
+
+        <div class="image-container">
+            <svg style="width: 100%; height: auto; display: block;" width="540" height="100%" viewBox="0 0 540 447">
+                <rect width="100%" height="auto"></rect>
+                <text [ngClass]="selectedEducation == 'MCA' ? 'selected' : ''" x="270" y="140" class="svg-text">
+                    MCA
+                    <title>MCA</title>
+                </text>
+                <text [ngClass]="selectedEducation == 'BCA' ? 'selected' : ''" x="270" y="200" class="svg-text">
+                    BCA
+                    <title>BCA</title></text>
+                <text [ngClass]="selectedEducation == 'HSC' ? 'selected' : ''" x="270" y="260" class="svg-text">
+                    HSC
+                    <title>HSC</title>
+                </text>
+                <text [ngClass]="selectedEducation == 'SSC' ? 'selected' : ''" x="270" y="320" class="svg-text">
+                    SSC
+                    <title>SSC</title></text>
+            </svg>
+        </div>
+    </div>
 </div>

@@ -22,6 +22,7 @@
             text {
                 opacity: 0.05;
                 fill: var(--text-light) !important;
+                filter: grayscale(100%) blur(2px);
                 transition-duration: 200ms;
             }
         }
@@ -34,11 +35,13 @@
             opacity: 0.3;
             cursor: pointer;
             transition-duration: 200ms;
+            filter: grayscale(75%) blur(1px);
 
             &.selected {
                 opacity: 1;
                 fill: var(--accent) !important;
                 font-size: 80px !important;
+                filter: grayscale(0%) blur(0px);
             }
         }
     }

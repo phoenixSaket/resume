@@ -12,7 +12,6 @@ import { ExperienceComponent } from './experience/experience.component';
 import { WorkComponent } from './work/work.component';
 import { EducationComponent } from './education/education.component';
 import { ContactComponent } from './contact/contact.component';
-import { ProjectDetailsComponent } from './project-details/project-details.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,6 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
     WorkComponent,
     EducationComponent,
     ContactComponent,
-    ProjectDetailsComponent,
   ],
   imports: [
     BrowserModule,
