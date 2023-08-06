@@ -13,111 +13,107 @@
         flex-direction: column;
         position: relative;
         height: max-content;
-
-        .education {
-            display: flex;
-            gap: 10px;
-            padding: 5px 0 0px;
-            width: 60%;
-
-
-            .index {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 5px;
-                min-height: 100%;
-                width: 35px;
-
-                .number {
-                    min-width: 35px;
-                    min-height: 35px;
-                    font-size: 12px;
-                    font-weight: 700;
-                    color: var(--text-dark);
-                    border-radius: 50%;
-                    background-color: var(--accent);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-
-                .line:not(.last) {
-                    min-height: calc(100% - 40px);
-                    width: 1.5px;
-                    background-color: var(--accent-text);
-                    border-radius: 50%;
-                }
-
-            }
-
-            .details {
-                .title {
-                    margin: 6px 0 0;
-                }
-
-                .role {
-                    margin: 5px 0;
-                    font-size: 14px;
-                    color: var(--accent-text);
-                }
-
-                .date {
-                    margin: 2px 0 10px;
-                    font-size: 10px;
-                    font-style: italic;
-                    color: var(--text-dark);
-                }
-
-                .college {
-                    margin: 2px 0 10px;
-                    font-size: 12px;
-                }
-
-                .description {
-                    color: var(--accent-text);
-                    font-size: 12px;
-                }
-            }
-
-        }
-
     }
 
-    .show {
-        .image-container {
-            .svg-text {
-                filter: blur(2px) grayscale(1);
-                font-size: 40px;
-                opacity: 0.05;
-
-
-                &.selected {
-                    opacity: 1 !important;
-                    font-size: 120px;
-                    filter: blur(0);
-                    z-index: 3;
-                    font-family: "Cabin";
-                    letter-spacing: unset;
-                }
-            }
-        }
+    .education {
+        display: flex;
+        gap: 10px;
+        padding: 5px 0 0px;
+        width: 60%;
     }
 
+    .index {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        min-height: 100%;
+        width: 35px;
+    }
+
+    .number {
+        min-width: 35px;
+        min-height: 35px;
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--text-dark);
+        border-radius: 50%;
+        background-color: var(--accent);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.line:not(.last) {
+    min-height: calc(100% - 40px);
+    width: 1.5px;
+    background-color: var(--accent-text);
+    border-radius: 50%;
+}
+
+.details {
+    .title {
+        margin: 6px 0 0;
+    }
+
+    .role {
+        margin: 5px 0;
+        font-size: 14px;
+        color: var(--accent-text);
+    }
+
+    .date {
+        margin: 2px 0 10px;
+        font-size: 10px;
+        font-style: italic;
+        color: var(--text-dark);
+    }
+
+    .college {
+        margin: 2px 0 10px;
+        font-size: 12px;
+    }
+
+    .description {
+        color: var(--accent-text);
+        font-size: 12px;
+    }
+}
+
+.show {
     .image-container {
-        position: absolute;
-        right: 30px;
-        top: 30px;
-        height: 100%;
-
         .svg-text {
-            font-size: 80px;
-            fill: var(--accent-text);
-            opacity: 0.2;
             filter: blur(2px) grayscale(1);
-            transition-duration: 300ms;
-            font-family: monospace;
-            letter-spacing: 3px;
+            font-size: 40px;
+            opacity: 0.05;
+
+
+            &.selected {
+                opacity: 1 !important;
+                font-size: 120px;
+                filter: blur(0);
+                z-index: 3;
+                font-family: "Cabin";
+                letter-spacing: unset;
+            }
         }
+    }
+}
+
+.image-container {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    height: 100%;
+
+    .svg-text {
+        font-size: 80px;
+        fill: var(--accent-text);
+        opacity: 0.2;
+        filter: blur(2px) grayscale(1);
+        transition-duration: 300ms;
+        font-family: monospace;
+        letter-spacing: 3px;
     }
 }
