@@ -6,7 +6,7 @@
 
 .navigation-container {
     position: fixed;
-    top: calc( 50% - 160px);
+    top: calc(50% - 160px);
     right: 3px;
     background-color: var(--bg);
     padding: 30px 12px;
@@ -15,7 +15,7 @@
     border: 2px solid var(--text-dark);
     transition-duration: 200ms;
     z-index: 10;
-    
+
     @extend .center;
     flex-direction: column;
     align-items: flex-start;
@@ -31,7 +31,7 @@
         width: 100%;
         display: flex;
         gap: 10px;
-        
+
         mat-icon {
             transition-duration: 200ms;
             @extend .center;
@@ -47,6 +47,7 @@
     a.active {
         color: var(--accent);
         border-bottom: 2px solid var(--accent);
+
         mat-icon {
             transform: scale(1.4);
         }
@@ -74,12 +75,25 @@
         left: 0;
         top: unset;
         right: unset;
-        padding: 12px;
-        border-radius: 5px;
+        padding: 15px 10px;
+        border-radius: 2px;
         width: 100%;
 
         display: flex;
         flex-direction: row;
         height: max-content;
+
+        a.active {
+            color: var(--accent);
+            border-bottom: none;
+    
+            mat-icon {
+                transform: scale(1.4);
+            }
+        }
+    }
+
+    .navigation-container:hover {
+        border: none;
     }
 }
