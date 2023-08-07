@@ -18,31 +18,8 @@
         opacity: 1;
         z-index: -1;
 
-        &.colorize {
-            text {
-                opacity: 0.05;
-                fill: var(--text-light) !important;
-                filter: grayscale(100%) blur(2px);
-                transition-duration: 200ms;
-            }
-        }
-
         svg {
             margin-top: 150px;
-        }
-
-        text {
-            opacity: 0.3;
-            cursor: pointer;
-            transition-duration: 200ms;
-            filter: grayscale(75%) blur(1px);
-
-            &.selected {
-                opacity: 1;
-                fill: var(--accent) !important;
-                font-size: 80px !important;
-                filter: grayscale(0%) blur(0px);
-            }
         }
     }
 
@@ -83,6 +60,7 @@
     .icons {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         gap: 30px;
         margin: 0 0 75px 0;
 
@@ -102,5 +80,84 @@
             opacity: 1;
         }
     }
+
+    .light-green {
+        color: var(--accent-text);
+    }
+
+}
+
+text {
+    opacity: 0.3;
+    cursor: pointer;
+    transition-duration: 200ms;
+    filter: grayscale(75%) blur(1px);
+}
+
+.image-container.colorize {
+    text {
+        opacity: 0.05;
+        fill: var(--text-light);
+        filter: grayscale(100%) blur(2px);
+        transition-duration: 200ms;
+
+        &.selected {
+            opacity: 1;
+            fill: var(--accent) !important;
+            font-size: 80px !important;
+            filter: grayscale(0%) blur(0px);
+        }
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    text {
+        opacity: 0.05;
+        cursor: pointer;
+        transition-duration: 200ms;
+        filter: grayscale(75%) blur(1px);
+    }
+
+    .about-me-container {
+
+        .image-container {
+            position: absolute;
+            top: 220px;
+            height: unset;
+            display: flex !important;
+            align-items: center;
+            justify-content: flex-end;
+            right: 0;
+            opacity: 1;
+            z-index: -1;
+
+            svg {
+                margin-top: 0px !important;
+            }
+        }
+
+    }
+
+    .image-container.colorize {
+        text {
+            opacity: 0.025;
+            fill: var(--text-light);
+            filter: grayscale(100%) blur(2px);
+            transition-duration: 200ms;
+
+            &.selected {
+                opacity: 0.3;
+                fill: var(--accent) !important;
+                font-size: 80px !important;
+                filter: grayscale(0%) blur(0px);
+            }
+        }
+
+
+    }
+
+
 
 }
