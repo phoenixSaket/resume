@@ -12,7 +12,7 @@ export class ExperienceComponent {
   public experience = [
     {
       "company": "CitiusTech",
-      "role": "Software Enginner",
+      "role": "Senior Software Enginner",
       "period": {
         "start": {
           "month": 10,
