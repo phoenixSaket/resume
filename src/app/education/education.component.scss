@@ -20,6 +20,7 @@
         gap: 10px;
         padding: 5px 0 0px;
         width: 60%;
+        z-index: 1;
     }
 
     .index {
@@ -93,7 +94,6 @@
                 opacity: 1 !important;
                 font-size: 120px;
                 filter: blur(0);
-                z-index: 3;
                 font-family: "Cabin";
                 letter-spacing: unset;
             }

@@ -38,6 +38,14 @@ export class WorkComponent {
     { title: 'Apple Wallet', description: 'Integration in IOS apps to add the dynamic ID card from the app to iPhone\'s Wallet app. Received multiple client appreciations.', link: '', stack: ['Capacitor', 'Angular'], isClientProject: true, image: 'assets/Images/Projects/wallet.png' , openInDetails: false, detailedDescription: 'Integration in IOS apps to add the dynamic ID card from the app to iPhone\'s Wallet app. Generating the PKPass file bundle and then adding the received bundle file into the iPhones\'s Apple Wallet app. Received multiple client appreciations.', warning: ""},
   ];
 
+  constructor() {
+    if(screen.width <= 768) {
+      this.projects.forEach((project: any)=> {
+        project.openInDetails = false;
+      });
+    }
+  }
+
   openProject(project: any, index: number) {
     this.projects[index].openInDetails = true;
   }

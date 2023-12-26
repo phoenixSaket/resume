@@ -18,9 +18,35 @@ export class HomeComponent implements AfterViewInit {
 
     this.year = Math.floor(date);
     this.month = Math.floor((date - this.year) * 12);
-    this.days = Math.floor((((date - this.year) * 12) - this.month) * 24);  
+    this.days = Math.ceil((((date - this.year) * 12) - this.month) * this.getDaysInMonth());  
+    console.log("check");
     
     this.namingFunction();
+  }
+
+  getDaysInMonth(): number {
+    let days: number = 30;
+
+    const month: number = new Date().getMonth() + 1;
+    const year: number = new Date().getFullYear();
+    const isLeapYear: boolean = year % 4 == 0;
+
+    switch (month) {
+      case 1 || 3 || 5 || 7 || 8 || 10 || 12:
+        days = 31;
+        break;
+      case 2:
+        days = isLeapYear ? 29 : 28;
+        break;
+      case 4 || 6 || 9 || 11:
+        days = 30;
+        break;
+      default:
+        days = 30;
+        break;
+    }
+
+    return days
   }
 
   calculateDate(date: Date) {
