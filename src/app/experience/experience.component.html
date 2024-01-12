@@ -1,8 +1,10 @@
 <div class="experience-container">
     <h1><span class="green">Experience</span></h1>
 
-    <div class="experience-inner-container" [ngClass]="cursorInit ? 'show' : ''" (mouseenter)="initCursor()" (mouseleave)="resetCursor()">
-        <div class="experience" *ngFor="let exp of experience; let i = index; let last = last" (mouseenter)="selectCompany(exp.company)">
+    <div class="experience-inner-container" [ngClass]="cursorInit ? 'show' : ''" (mouseenter)="initCursor()"
+        (mouseleave)="resetCursor()">
+        <div class="experience" *ngFor="let exp of experience; let i = index; let last = last"
+            (mouseenter)="selectCompany(exp.company)">
             <div class="index">
                 <div class="number">{{experience.length - i}}</div>
                 <div class="line" [ngClass]="{'last': last}"></div>
@@ -11,24 +13,33 @@
             <div class="details">
                 <h3 class="title green">{{exp.company}}</h3>
                 <h5 class="role">{{exp.role}}</h5>
-                <h6 class="date">
+                <h6 class="date green">
                     <span class="start">{{getMonth(exp.period.start.month)}}, {{exp.period.start.year}}</span>
                     -
                     <span class="end" *ngIf="exp.period.end.month != 0">{{getMonth(exp.period.end.month)}},
                         {{exp.period.end.year}}</span>
                     <span class="end" *ngIf="exp.period.end.month == 0">Current</span>
                 </h6>
+                <h6 class="date small">
+                    {{exp.timePeriod.year == 0 ? '': exp.timePeriod.year + ' years'}} 
+                    {{exp.timePeriod.month == 0 ? '': exp.timePeriod.month + ' months'}} 
+                    {{exp.timePeriod.day == 0 ? '': exp.timePeriod.day + ' days'}} 
+                </h6>
+
                 <div class="link">{{exp.link}}</div>
                 <p class="description">{{exp.description}}</p>
             </div>
         </div>
 
         <div class="image-container">
-            <img [ngClass]="selectedCompany == 'CitiusTech' ? 'selected' : ''" src="https://raw.githubusercontent.com/phoenixSaket/saketVerma/master/saketverma/src/Images/citiustech.png"
+            <img [ngClass]="selectedCompany == 'CitiusTech' ? 'selected' : ''"
+                src="https://raw.githubusercontent.com/phoenixSaket/saketVerma/master/saketverma/src/Images/citiustech.png"
                 alt="CitiusTech" class="image ct" />
-            <img [ngClass]="selectedCompany == 'ScrollRight' ? 'selected' : ''" src="https://raw.githubusercontent.com/phoenixSaket/saketVerma/master/saketverma/src/Images/sr_mukul.png"
+            <img [ngClass]="selectedCompany == 'ScrollRight' ? 'selected' : ''"
+                src="https://raw.githubusercontent.com/phoenixSaket/saketVerma/master/saketverma/src/Images/sr_mukul.png"
                 alt="ScrollRight" class="image sr" />
-            <img [ngClass]="selectedCompany == 'PlexusMD' ? 'selected' : ''" src="https://raw.githubusercontent.com/phoenixSaket/saketVerma/master/saketverma/src/Images/PlexusMD.png"
+            <img [ngClass]="selectedCompany == 'PlexusMD' ? 'selected' : ''"
+                src="https://raw.githubusercontent.com/phoenixSaket/saketVerma/master/saketverma/src/Images/PlexusMD.png"
                 alt="PlexusMD" class="image plexus" />
         </div>
     </div>

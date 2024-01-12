@@ -12,12 +12,6 @@
     max-width: 1440px;
     min-height: 100vh;
 
-    &:hover {
-        .image-container img {
-            transform: scale(1.2);
-        }
-    }
-
     .image-container {
         width: 40%;
         // max-width: 400px;

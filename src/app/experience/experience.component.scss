@@ -69,6 +69,14 @@
         font-size: 12px;
         font-style: italic;
         color: var(--text-dark);
+
+        &.small {
+            font-size: 10px;
+        }
+
+        &.green {
+            color: var(--accent-text)
+        }
     }
 
     .link {

@@ -8,17 +8,23 @@ import { Component } from '@angular/core';
 export class AboutComponent {
   public selectedTech: string = "";
   public isInit: boolean = false;
+  isMobile: boolean = false;
 
   public icons = [
     "Angular",
     "NodeJS",
     "Ionic",
     "Capacitor",
+    "Dynatrace",
     "SQLite",
     "Photoshop",
     "Adboe XD",
     "Figma"
   ];
+
+  constructor() {
+    this.isMobile = screen.width <= 500;
+  }
 
   setSelectedTech(tech: string) {
     this.selectedTech = tech;

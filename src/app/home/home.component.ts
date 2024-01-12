@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { delay } from 'rxjs';
 
 @Component({
@@ -6,20 +6,19 @@ import { delay } from 'rxjs';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements OnInit {
 
-  public year: number = 0;
-  public month: number = 0;
-  public days: number = 0;
-  public name: string = 'SAKET VERMA';
+  year: number = 0;
+  month: number = 0;
+  days: number = 0;
+  name: string = 'SAKET VERMA';
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     const date = this.calculateDate(new Date(2020, 9, 5));
 
     this.year = Math.floor(date);
     this.month = Math.floor((date - this.year) * 12);
     this.days = Math.ceil((((date - this.year) * 12) - this.month) * this.getDaysInMonth());  
-    console.log("check");
     
     this.namingFunction();
   }
