@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-home',
