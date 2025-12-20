@@ -13,38 +13,18 @@ export class HomeComponent implements OnInit {
   name: string = 'SAKET VERMA';
 
   ngOnInit(): void {
-    const date = this.calculateDate(new Date(2020, 9, 5));
+    const date = this.calculateDate(new Date(2020, 0, 6));
 
     this.year = Math.floor(date);
     this.month = Math.floor((date - this.year) * 12);
-    this.days = Math.ceil((((date - this.year) * 12) - this.month) * this.getDaysInMonth());  
-    
+    this.days = Math.ceil((((date - this.year) * 12) - this.month) * this.getDaysInMonth());
+
     this.namingFunction();
   }
 
   getDaysInMonth(): number {
-    let days: number = 30;
-
-    const month: number = new Date().getMonth() + 1;
-    const year: number = new Date().getFullYear();
-    const isLeapYear: boolean = year % 4 == 0;
-
-    switch (month) {
-      case 1 || 3 || 5 || 7 || 8 || 10 || 12:
-        days = 31;
-        break;
-      case 2:
-        days = isLeapYear ? 29 : 28;
-        break;
-      case 4 || 6 || 9 || 11:
-        days = 30;
-        break;
-      default:
-        days = 30;
-        break;
-    }
-
-    return days
+    const date = new Date();
+    return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
   }
 
   calculateDate(date: Date) {

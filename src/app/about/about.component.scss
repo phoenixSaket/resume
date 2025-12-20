@@ -80,6 +80,7 @@
         .icon:not(:hover) {
             opacity: 0.08;
         }
+
         .icon {
             opacity: 0.8;
         }
@@ -88,6 +89,7 @@
 
     .icon:hover {
         transform: scale(2);
+
         .svg-green-fill {
             opacity: 1;
         }
@@ -108,6 +110,10 @@ text {
     cursor: pointer;
     transition-duration: 200ms;
     filter: grayscale(75%) blur(1px);
+}
+
+.gray {
+    color: var(--text-light);
 }
 
 .image-container.colorize {
@@ -138,7 +144,7 @@ text {
 
     .about-me-container {
         justify-content: unset;
-        
+
         .image-container {
             position: absolute;
             top: 180px;
@@ -181,7 +187,7 @@ text {
             }
         }
     }
-    
+
 }
 
 .small {

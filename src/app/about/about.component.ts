@@ -13,13 +13,14 @@ export class AboutComponent {
   public icons = [
     "Angular",
     "NodeJS",
+    "React Native",
     "Ionic",
     "Capacitor",
     "Dynatrace",
     "SQLite",
     "Photoshop",
-    "Adboe XD",
-    "Figma"
+    "Figma",
+    "Adboe XD"
   ];
 
   constructor() {
