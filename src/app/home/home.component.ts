@@ -33,6 +33,13 @@ export class HomeComponent implements OnInit {
     return dateCheck;
   }
 
+  downloadResume() {
+    const link = document.createElement('a');
+    link.download = 'Saket_Verma_Resume.pdf';
+    link.href = 'https://phoenixsaket.github.io/saket-resume/Saket_Verma.pdf';
+    link.click();
+  }
+
   namingFunction() {
     let interval: any = null;
     let iteration = 0;
