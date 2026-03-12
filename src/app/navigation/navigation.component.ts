@@ -21,6 +21,8 @@ export class NavigationComponent {
       this.onChange.next(this.isEnabled);
     });
 
+    this.isEnabled = this.isMobile:
+
   }
 
   ngOnInit() {
