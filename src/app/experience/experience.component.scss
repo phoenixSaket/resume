@@ -34,8 +34,9 @@
     .number {
         min-width: 35px;
         min-height: 35px;
-        font-size: 12px;
+        font-size: 16px;
         font-weight: 700;
+        transform: rotate(-20deg);
         color: var(--text-dark);
         border-radius: 50%;
         background-color: var(--accent);
@@ -47,7 +48,7 @@
     .line:not(.last) {
         min-height: calc(100% - 40px);
         width: 1.5px;
-        background-color: var(--accent-text);
+        background-color: var(--text-dark);
         border-radius: 50%;
     }
 
@@ -56,22 +57,23 @@
 .details {
     .title {
         margin: 6px 0 0;
+        font-size: 22px;
     }
 
     .role {
         margin: 5px 0;
-        font-size: 16px;
+        font-size: 18px;
         color: var(--accent-text);
     }
 
     .date {
         margin: 2px 0 0;
-        font-size: 12px;
+        font-size: 16px;
         font-style: italic;
-        color: var(--text-dark);
+        color: var(--text-light);
 
         &.small {
-            font-size: 10px;
+            font-size: 14px;
         }
 
         &.green {

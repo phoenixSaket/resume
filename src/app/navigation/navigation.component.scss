@@ -63,6 +63,24 @@
             transform: scale(1.1);
         }
     }
+
+    &.show {
+        transform: translateY(0%) translateX(0) rotate(0deg);
+    }
+
+    &.hide {
+        transform: translateY(calc(-100% - 105px)) translateX(-125px) rotate(-90deg);
+        opacity: 0.5;
+        border: 2px solid transparent;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        a {
+            transform: rotate(90deg);
+        }
+    }
 }
 
 .navigation-container:hover {
@@ -87,7 +105,7 @@
         a.active {
             color: var(--accent);
             border-bottom: none;
-    
+
             mat-icon {
                 transform: scale(1.4);
             }

@@ -35,9 +35,10 @@
     .number {
         min-width: 35px;
         min-height: 35px;
-        font-size: 12px;
+        font-size: 16px;
         font-weight: 700;
         color: var(--text-dark);
+        transform: rotate(-20deg);
         border-radius: 50%;
         background-color: var(--accent);
         display: flex;
@@ -49,7 +50,7 @@
 .line:not(.last) {
     min-height: calc(100% - 40px);
     width: 1.5px;
-    background-color: var(--accent-text);
+    background-color: var(--text-dark);
     border-radius: 50%;
 }
 
@@ -68,7 +69,7 @@
         margin: 2px 0 10px;
         font-size: 12px;
         font-style: italic;
-        color: var(--text-dark);
+        color: var(--text-light);
     }
 
     .college {
